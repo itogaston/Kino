@@ -1,2 +1,4 @@
-Adrian Guiral Mallart
-Fermin Elcano Barbero
+## Contributors
+- Adrian Guiral Mallart
+- Iñigo Gastón Martínez
+- Fermin Elcano Barbero
