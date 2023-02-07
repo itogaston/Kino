@@ -1,1 +1,5 @@
-Adrian Guiral Mallart
+# Grupo Ocelote
+
+## Contributors
+- Adrian Guiral Mallart
+- Iñigo Gastón Martínez
