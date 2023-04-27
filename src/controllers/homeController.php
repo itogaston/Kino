@@ -1,3 +1,4 @@
 <?php
-echo "<p> Vista </p>"
+// Call the view
+require_once "views/homeView.php";
 ?>
