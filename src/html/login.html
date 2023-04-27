@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/loginSt.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class ="center">
+        <h1>Login</h1>
+        <form action="index.php?accion=login&id=2" method="post">
+            <div class="txt_field">
+                <input type="text" name="usuario" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>           
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                <a href="index.php?accion=registro&id=1">Not a member? Sign Up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
