@@ -5,155 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/flickity.pkgd.min.js"></script>
+    <link rel="icon" href="../assets/cinema-center.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/flickity.min.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/flickity.pkgd.min.js"></script>
+    <script src="../js/searchListener.js"></script>
+    <title>C I N E</title>
 </head>
-
-<style>
-    @font-face {
-        font-family: "Raleway-Light";
-        src: url("/assets/Raleway-Light.ttf") format("truetype");
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Raleway-Light', Arial, sans-serif;
-    }
-
-    section {
-        margin: 2rem 2rem;
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .signin-btn {
-        background-color: #3390ec;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: default;
-    }
-
-    .movie-carousel {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .movie-carousel>img {
-        border: solid 1px black;
-        border-radius: 7px;
-
-    }
-
-    .staf-pick {
-        text-align: center;
-        border: solid 1px black;
-        border-radius: 7px;
-    }
-
-    .staf-header>p {
-        margin: 1rem 0;
-        font-size: xx-large;
-    }
-
-    .movie-container {
-        display: flex;
-        margin: 1rem;
-    }
-
-    .movie-container>* {
-        flex-basis: 50%;
-    }
-
-    .movie-poster {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .movie-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .movie-title {
-        font-size: x-large;
-    }
-
-    .movie-rating {
-        display: flex;
-        justify-content: center;
-    }
-
-    footer {
-        background-color: #322d32;
-        min-height: 3rem;
-        display: flex;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        color: white;
-    }
-
-    footer > *{
-        margin: 0.5rem;
-    }
-
-
-
-
-
-    /* external css: flickity.css */
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body { font-family: sans-serif; }
-
-.gallery {
-  background: #EEE;
-}
-
-.gallery-cell {
-  width: 300px;
-  height: 400px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-
-</style>
 
 <body>
     <main>
-        <section>
+        <section id="heder">
             <div class="header">
                 <div class="logo">
-                    <img src="/assets/logo.jpeg" alt="" srcset="" height="100px">
+                    <img src="/assets/glue.svg" alt="" srcset="" height="80px" style="transform: rotate();">
                 </div>
+
+                <div class="search-bar">
+                    <div class="bar">
+                        <input type="search" id="search-input" alt="" srcset="" onkeypress="searchKeyEvent(event)">
+                        <div class="search-icon">
+                            <img src="/assets/magnifying-glass-solid.svg">
+                        </div>
+                    </div>
+                </div>  
 
                 <div class="signin-btn">
                     Login
@@ -162,30 +37,39 @@ body { font-family: sans-serif; }
         </section>
 
         <section>
-            <div class="movie-carousel">
-                <img src="/assets/pepega.png" alt="" width="100px" height="150px">
-                <img src="/assets/pepega.png" alt="" width="100px" height="150px">
-                <img src="/assets/pepega.png" alt="" width="100px" height="150px">
-            </div>
-        </section>
-
-        <section>
             <h2>TEST</h2>
 
-            <div class="carousel" 
-                data-flickity='{ 
+            <div class="carousel" data-flickity='{ 
                     "autoPlay": 2500, 
                     "pauseAutoPlayOnHover": true, 
                     "wrapAround": true,  
                     "prevNextButtons": false,
                     "pageDots": false
-                }'
-            >
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
+                }'>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/301" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/302" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/303" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/304" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/305" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/306" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/307" alt="" srcset="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://picsum.photos/200/308" alt="" srcset="">
+                </div>
             </div>
         </section>
 
@@ -194,25 +78,14 @@ body { font-family: sans-serif; }
                 <div class="staf-header">
                     <p>Our Selection</p>
                 </div>
-                <div class="movie-container">
-                    <div class="movie-poster">
-                        <img src=<?= $movie->getMoviePoster() ?> alt="" width="200px">
-                    </div>
-                    <div class="movie-info">
-                        <div class="movie-title"> <?= $movie->getMovieName() ?> </div>
-                        <div class="movie-desc"> <?= $movie->getMovieDesc() ?> </div>
-                        <div class="movie-rating">
-                            <?php for ($i = 0; $i < $movie->getMovieStars(); $i++) {
-                                echo '<div class="star star-check">★</div>';
-                            }
-                            ?>
-                            <?php for ($i = $movie->getMovieStars(); $i < 5; $i++) {
-                                echo '<div class="star star-uncheck">☆</div>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
+ 
+                <?php
+                    echo '<ul class="product-info">';
+                    foreach( $movies as $movie ){
+                        echo '<li><span></span>'. $movie->getMovieTitle().' - '. $movie->getYear().'</li>';
+                    }
+                    echo '</ul>';
+                ?>
             </div>
         </section>
 
@@ -228,7 +101,6 @@ body { font-family: sans-serif; }
             </div>
 
         </footer>
-
     </main>
 </body>
 
