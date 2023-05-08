@@ -15,11 +15,10 @@
     protected $boxoffice;
     protected $genre;
 
-    // private $db;
 
     public function __construct($movieData) {
-        $this->titulo = $movieData["Title"];
-        $this->year = $movieData["Year"];
+        $this->titulo = $movieData['Title'];
+        $this->year = $movieData['Year'];
         $this->rating = $movieData['Rating'];
         $this->awards = $movieData['Awards'];
         $this->cod = $movieData['imdbID'];
