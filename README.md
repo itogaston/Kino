@@ -11,9 +11,14 @@
 
 ## Usefull Commands for devs
 
+Start Backend:
 ````
-npm install - g nodemon
-nodemon --exec "php -S localhost:8000" --watch . -e php
+php -S localhost:5500 -t src/
+````
+
+Use tailwind CLI in watch mode
+````
+tailwindcss -o src/css/tailwind.css --watch
 ````
 
 ## Contributors
