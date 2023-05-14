@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*fuentes nueva*/
+}
+
+--root{
+    --fondo: #14181c;
+    --headerMenu: #21282f;
+    --textTitle: white;
+    --textBase: #99aabb ;
+    --hover:#a78bfa  ;
+    
+} 
+
