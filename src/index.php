@@ -1,19 +1,35 @@
 <?php
+//Get url variables
 if (isset($_GET['page'])) {
-    print($_GET['page']);
-    $requested_page = $_GET['page'];
+    $page = $_GET['page'];	
 } else {
-    $requested_page = 'home';
+    if (isset($_POST["page"])) {
+        $page = $_POST['page'];
+    } else {
+        $page = "logIn";
+    }
 }
-// a better way would be to put this into an array, but I think a switch is easier to read for this example
-switch ($requested_page) {
-    case "blog":
-        include(__DIR__ . "/controllers/blog.php");
-        break;
-    case "home":
-        include(__DIR__ . "/controllers/homeController.php");
-        break;
-    default:
-        include(__DIR__ . "/404.php");
+
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];	
+} else {
+    if (isset($_POST["action"])) {
+        $action = $_POST['action'];
+    } else {
+        $action = "viewLogIn";
+    }
 }
+
+if($page == "logIn") {
+    include(__DIR__."/controllers/loginController.php");
+}
+else if($page == "signUp") {
+    include(__DIR__."/controllers/signupController.php");
+}
+else if($page == "advSearch") {
+    include(__DIR__."/controllers/advancedSearchController.php");
+}
+
 ?>
+
+
