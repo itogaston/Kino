@@ -6,7 +6,7 @@ function signUp() {
     $user = $_POST['user'];
     $passwd = md5($_POST['password']);
 
-    $insertQuery = "insert into USERS (userName, passwd) values ('$user', '$passwd')";
+    $insertQuery = "insert into users (userName, passwd) values ('$user', '$passwd')";
     $selectQuery = "select * from users where userName = '$user'";
 
     if ($queryReturn = $con->query($selectQuery)) {

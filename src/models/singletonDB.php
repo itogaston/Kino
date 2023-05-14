@@ -3,7 +3,7 @@ class SingletonDB {
     private static $instance = null;
     private $connection;
     private function __construct() {
-        $this->connection = mysqli_connect("localhost", "root", "", "ingweb");
+        $this->connection = mysqli_connect("localhost", "root", "starscourge", "ingweb");
         //$this->connection = mysqli_connect("localhost", "root", "", "ingweb");
     }
 
