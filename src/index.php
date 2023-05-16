@@ -7,8 +7,8 @@ if (isset($_GET['page'])) {
 }
 
 switch ($requested_page) {
-    case "blog":
-        include(__DIR__ . "/controllers/blog.php");
+    case "list":
+        include(__DIR__ . "/controllers/listController.php");
         break;
     case "home":
         include(__DIR__ . "/controllers/homeController.php");
