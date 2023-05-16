@@ -22,11 +22,17 @@
                 <h1 class="ml-2 hidden sm:block">C I N E</h1>
             </div>
 
-            <div class="basis-1/3 flex items-center justify-between rounded-md bg-violet-300 h-8">   
-                <input class="bg-violet-300 border-none rounded-md h-8 w-11/12" 
-                    type="search" id="search-input" alt="" srcset="" onkeypress="searchKeyEvent(event)">
-                <img src="/assets/magnifying-glass-solid.svg" class="w-5 h-5 hover:cursor-pointer mx-1" onclick="goToList()">
-            </div>
+            <form action="/" class="basis-1/3 flex items-center justify-between rounded-md bg-violet-300 h-8"> 
+                <div id="input-text-container" class="w-full">
+                    <label for="title"></label>
+                    <input class="bg-violet-300 border-none rounded-md h-8 w-full" 
+                        type="search" id="search-input" name="title" srcset="" onkeypress="searchKeyEvent(event)">
+                </div>    
+            
+                <button type="submit" class="mx-2">
+                    <img src="/assets/magnifying-glass-solid.svg" class="w-5 h-5" onclick="goToList()">
+                </button>
+            </form>
 
             <div class="basis-1/3 flex justify-center sm:justify-end">
                 <p class="bg-amber-400 rounded-md py-2 px-3 sm:mr-5 hover:cursor-pointer">Login</p> 
@@ -39,49 +45,24 @@
         <section>
             <div class="carousel-container sm:mx-16 md:mx-28 mb-10">
                 <div class="section-title flex flex-col items-center text-neutral-200 mb-4">
-                    <h2>Titulo de la sección</h2>
+                    <h2>Our selection</h2>
                 </div>
 
                 <div class="carousel" data-flickity='{ 
-                    "autoPlay": 0, 
+                    "autoPlay": 3000, 
                     "pauseAutoPlayOnHover": true, 
                     "wrapAround": true,  
-                    "prevNextButtons": false,
+                    "prevNextButtons": true,
                     "pageDots": false
                 }'>
-                    
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="/docs/" alt="" srcset="" style="height: 308px; width: 200px">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://m.media-amazon.com/images/M/MV5BNmZjZDQ1N2QtMTNkMS00OGYyLWI2MTktOWVlMzliMjlhMTBjXkEyXkFqcGdeQXVyODkwNDUwNw@@._V1_SX300.jpg" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://picsum.photos/200/303" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://picsum.photos/200/304" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://picsum.photos/200/305" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://picsum.photos/200/306" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://picsum.photos/200/307" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
-                    <div class="gallery-cell">
-                        <img class="hover:scale-105" src="https://picsum.photos/200/308" alt="" srcset="">
-                        <div class="bg-white w-full p-2">Titulo</div>
-                    </div>
+                    <?php
+                        foreach( $moviesCarousel as $movie ){
+                            echo ' <div class="gallery-cell">';
+                                echo '<img class="hover:scale-105 bg-neutral-600" src="" alt="" srcset="" style="height: 308px; width: 200px">';
+                                echo '<span class="flex justify-center items-center bg-white w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
+                            echo '</div>';
+                        }
+                    ?>
                 </div>
             </div>
         </section>
