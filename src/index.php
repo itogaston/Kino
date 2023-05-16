@@ -16,7 +16,7 @@ if (isset($_GET['action'])) {
     if (isset($_POST["action"])) {
         $action = $_POST['action'];
     } else {
-        $action = "viewLogIn";
+        $action = "logIn";
     }
 }
 
