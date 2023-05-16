@@ -11,20 +11,25 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-200px,-200px);
     width: 400px;
     background: white;
     border-radius: 10px;
 }
 
-@media (max-width: 600px){
+@media (min-width: 401px) and (max-width: 600px){
     .center{
-        transform: scale(0.75) translate(-66.9%, -66.9%);
+        transform: scale(0.75) translate(-150px, -150px);
     }
 }
-@media (max-width: 300px){
+@media (min-width: 351px) and (max-width: 400px){
     .center{
-        transform: scale(0.5) translate(-100%, -100%);
+        transform: scale(0.6) translate(-120px, -120px);
+    }
+}
+@media (max-width: 350px){
+    .center{
+        transform: scale(0.5) translate(-100px, -100px);
     }
 }
 

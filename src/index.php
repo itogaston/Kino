@@ -17,6 +17,7 @@ if (isset($_GET['action'])) {
         $action = $_POST['action'];
     } else {
         $action = "logIn";
+
     }
 }
 
@@ -28,6 +29,8 @@ else if($page == "signUp") {
 }
 else if($page == "advSearch") {
     include(__DIR__."/controllers/advancedSearchController.php");
+
+
 }
 
 ?>
