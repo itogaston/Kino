@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/cinema-center.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/flickity.min.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/tailwind.css">
-    <script src="../js/flickity.pkgd.min.js"></script>
-    <script src="../js/searchListener.js"></script>
+    <link rel="icon" href="../src/assets/cinema-center.png" type="image/x-icon">
+    <link rel="stylesheet" href="../src/css/flickity.min.css">
+    <link rel="stylesheet" href="../src/css/home.css">
+    <link rel="stylesheet" href="../src/css/tailwind.css">
+    <script src="../src/js/flickity.pkgd.min.js"></script>
+    <script src="../src/js/searchListener.js"></script>
     <title>C I N E</title>
 </head>
 
