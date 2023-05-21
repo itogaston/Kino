@@ -1,0 +1,30 @@
+<?php
+include "singletonDB.php";
+function logIn() {    
+    $singleton = SingletonDB::getInstance();
+    $con = $singleton->getConnection();
+    $user = $_POST['user'];
+    $passwd = md5($_POST['password']);
+
+    $selectQuery = "select * from users where userName = '$user'";
+
+    if ($queryReturn = $con->query($selectQuery)) {
+        if ($data = $queryReturn->fetch_assoc()) {
+            if($data["passwd"] == $passwd) {
+                echo "<script>alert('User logged correctly');</script>";
+            }
+            else {
+                //header("Location: index.php?page=logIn&action=viewLogIn");
+                echo "<script>alert('Incorrect password');</script>";
+            }
+        }
+        else {
+            //header("Location: index.php?page=logIn&action=viewLogIn");
+            echo "<script>alert('Incorrect user');</script>";
+        }
+    } 
+    else {
+        echo "<script>alert('DB Select ERROR');</script>";
+    }
+}
+?>

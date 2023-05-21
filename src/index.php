@@ -1,22 +1,38 @@
 <?php
-// TODO: if page is in available pages
+//Get url variables
 if (isset($_GET['page'])) {
-    $requested_page = $_GET['page'];
+    $page = $_GET['page'];	
 } else {
-    $requested_page = 'home';
+    if (isset($_POST["page"])) {
+        $page = $_POST['page'];
+    } else {
+        $page = "logIn";
+    }
 }
 
-switch ($requested_page) {
-    case "list":
-        include(__DIR__ . "/controllers/listController.php");
-        break;
-    case "home":
-        include(__DIR__ . "/controllers/homeController.php");
-        break;
-    case "signin":
-        include(__DIR__ . "/controllers/signController.php");
-        break;
-    default:
-        include(__DIR__ . "/404.php");
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];	
+} else {
+    if (isset($_POST["action"])) {
+        $action = $_POST['action'];
+    } else {
+        $action = "logIn";
+
+    }
 }
+
+if($page == "logIn") {
+    include(__DIR__."/controllers/loginController.php");
+}
+else if($page == "signUp") {
+    include(__DIR__."/controllers/signupController.php");
+}
+else if($page == "advSearch") {
+    include(__DIR__."/controllers/advancedSearchController.php");
+
+
+}
+
 ?>
+
+
