@@ -18,7 +18,7 @@ stages:          # List of stages for jobs, and their order of execution
 
 build_a:      
   tags:
-    - pipe
+    - build
   stage: build
   script:
     - echo "Compiling the code..."
