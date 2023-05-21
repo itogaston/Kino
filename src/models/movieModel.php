@@ -175,5 +175,3 @@ function get_movie_infoWYear($movie_title, $release_year, $search_type) {
 
 
 ?>
-
-?>
