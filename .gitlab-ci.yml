@@ -19,4 +19,4 @@ stages: # List of stages for jobs, and their order of execution
 build_a:
   stage: build
   script:
-    - npx tailwindcss -o src/css/tailwind.css
+    - echo "Compiling the code..."
