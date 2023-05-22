@@ -17,9 +17,9 @@
 <body class="bg-neutral-600">
     <header>
         <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 mb-5 bg-neutral-400 pb-2">
-            <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-5">
+            <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7">
                 <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
-                <h1 class="ml-2 hidden sm:block">C I N E</h1>
+                <h1 class="ml-3 hidden sm:block">C I N E</h1>
             </div>
 
             <form action="/" class="mt-2 sm:mt-0 mx-2 sm:mx-0 order-3 sm:order-none w-full sm:basis-1/3 flex items-center justify-between rounded-md bg-violet-300 h-8"> 
@@ -34,7 +34,7 @@
                 </button>
             </form>
 
-            <div class="basis-1/3 flex justify-center mr-2 sm:mr-0 mt-4 sm:mt-0 sm:justify-end">
+            <div class="basis-1/3 flex justify-center mr-2 sm:mr-3 mt-4 sm:mt-0 sm:justify-end">
                 <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','logIn')">Register</div> 
                 <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','logIn')">Login</div> 
             </div>
@@ -45,7 +45,7 @@
 
         <section>
             <div class="carousel-container sm:mx-16 md:mx-28 mb-10">
-                <div class="section-title flex flex-col items-center text-neutral-200 mb-4">
+                <div class="section-title flex flex-col items-center text-neutral-200 mb-4 text-xl sm:text-3xl sm:font-bold">
                     <h2>Our selection</h2>
                 </div>
 
@@ -62,7 +62,7 @@
                                     continue;
                             echo ' <div class="gallery-cell">';
                                 echo '<img class="hover:scale-105 bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="" style="height: 308px; width: 200px">';
-                                echo '<span class="flex justify-center items-center bg-white w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
+                                echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
                             echo '</div>';
                         }
                     ?>
@@ -70,23 +70,26 @@
             </div>
         </section>
 
-        <section>
-            <div class="staf-pick m-3 border-neutral-200 shadow-2xl">
-                <div class="staf-header">
-                    <p>Our Selection</p>
+        <section class="flex justify-center m-6">
+            <div class="flex flex-col border-solid border-2 rounded-md border-neutral-200 shadow-2xl md:w-2/3 text-neutral-200">
+                <div class="text-center text-xl sm:text-3xl sm:font-bold m-2">
+                    <p>The Showcase</p>
                 </div>
- 
-                <?php
-                    echo '<ul class="product-info">';
-                    foreach( $movies as $movie ){
-                        echo '<li><span></span>'. $movie->getMovieTitle().' - '. $movie->getYear().'</li>';
-                    }
-                    echo '</ul>';
-                ?>
+
+                <div class="flex flex-col sm:flex-row">
+                    <div class="mx-4 mb-4">
+                        <img class="hover:scale-105" src=<?php echo $showcaseMovie->getMoviePoster()?> alt="Poster for <?php echo $showcaseMovie->getMovieTitle()?>" srcset="">
+                    </div>
+                    <div class="mx-4">
+                        <div class="mb-4"><?php echo $showcaseMovie->getMovieTitle()?></div>
+                        <div><?php echo $showcaseMovie->getYear()?></div>
+                    </div>
+                </div>
+            </div>
         </section>
         </main>
 
-    <footer class="pt-4 bg-gradient-to-tr to-neutral-600 from-neutral-950 text-neutral-300 h-40">
+    <footer class="pt-4 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-40">
         <p class="ml-2">Footer</p>
         <div class="flex ml-2 my-5">
             <img src="../src/assets/gitlab.svg" class="w-5 h-5 mx-2">

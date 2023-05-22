@@ -72,7 +72,7 @@
     public function getMovieTitle() {
         return $this->titulo;
     }
-    public function getYear($titulo) {
+    public function getYear() {
         return $this->year;
     }
 
