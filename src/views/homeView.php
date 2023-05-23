@@ -89,19 +89,19 @@
         </section>
         </main>
 
-    <footer class="flex justify-evenly items-start pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-40">
-        <div class="logo-container flex items-center">
+    <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-fit sm:h-50">
+        <div class="logo-container flex items-center min-w-fit m-4">
             <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
-            <p class="ml-3 hidden sm:block">C I N E</p>
+            <p class="ml-3 block">C I N E</p>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col w-52 m-4 text-center">
             <p class="mb-2 underline text-lg">Contact us</p>
 
             
         </div>
 
-        <div class="resources">
+        <div class="resources w-52 m-4 text-center">
             <p class="mb-2 underline text-lg">Resources</p>
 
             <div>
@@ -123,7 +123,7 @@
 
         </div>
 
-        <div class="location">
+        <div class="location w-52 m-4 text-center">
             <p class="mb-2 underline text-lg">Location</p>
             <p>Av. Cataluña, 31006</p>
             <p>Pamplona, Navarra</p>
