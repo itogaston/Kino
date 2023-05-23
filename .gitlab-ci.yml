@@ -20,3 +20,4 @@ build_a:
   stage: build
   script:
     - echo "Compiling the code..."
+    - git pull
