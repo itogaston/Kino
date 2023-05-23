@@ -89,14 +89,44 @@
         </section>
         </main>
 
-    <footer class="pt-4 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-40">
-        <p class="ml-2">Footer</p>
-        <div class="flex ml-2 my-5">
-            <img src="../src/assets/gitlab.svg" class="w-5 h-5 mx-2">
+    <footer class="flex justify-evenly items-start pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-40">
+        <div class="logo-container flex items-center">
+            <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
+            <p class="ml-3 hidden sm:block">C I N E</p>
+        </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
-            </svg>
+        <div class="flex flex-col">
+            <p class="mb-2 underline text-lg">Contact us</p>
+
+            
+        </div>
+
+        <div class="resources">
+            <p class="mb-2 underline text-lg">Resources</p>
+
+            <div>
+                <a class="group flex flex-row justify-between items-center my-1" href="https://eim-laboratoriovirtual.unavarra.es/gitlab/ingweb2023/grupo-ocelote">
+                    <p class="group-hover:text-amber-400 group-hover:underline">Code</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-white w-5 h-5 group-hover:fill-amber-400">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M503.5 204.6L502.8 202.8L433.1 21.02C431.7 17.45 429.2 14.43 425.9 12.38C423.5 10.83 420.8 9.865 417.9 9.57C415 9.275 412.2 9.653 409.5 10.68C406.8 11.7 404.4 13.34 402.4 15.46C400.5 17.58 399.1 20.13 398.3 22.9L351.3 166.9H160.8L113.7 22.9C112.9 20.13 111.5 17.59 109.6 15.47C107.6 13.35 105.2 11.72 102.5 10.7C99.86 9.675 96.98 9.295 94.12 9.587C91.26 9.878 88.51 10.83 86.08 12.38C82.84 14.43 80.33 17.45 78.92 21.02L9.267 202.8L8.543 204.6C-1.484 230.8-2.72 259.6 5.023 286.6C12.77 313.5 29.07 337.3 51.47 354.2L51.74 354.4L52.33 354.8L158.3 434.3L210.9 474L242.9 498.2C246.6 500.1 251.2 502.5 255.9 502.5C260.6 502.5 265.2 500.1 268.9 498.2L300.9 474L353.5 434.3L460.2 354.4L460.5 354.1C482.9 337.2 499.2 313.5 506.1 286.6C514.7 259.6 513.5 230.8 503.5 204.6z"/>
+                    </svg>
+                </a>
+                <a class="group flex flex-row justify-between items-center my-1" href="https://docs.google.com/document/d/1zqZAzW1Ktz8cG_RPNX09CWtMRme3xzheYW9RDkZgnWs/edit?usp=sharing">
+                    <p class="group-hover:text-amber-400 group-hover:underline">Docs</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="fill-white w-5 h-5 group-hover:fill-amber-400">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/>
+                    </svg>
+                </a>
+            </div>
+            
+
+        </div>
+
+        <div class="location">
+            <p class="mb-2 underline text-lg">Location</p>
+            <p>Av. Cataluña, 31006</p>
+            <p>Pamplona, Navarra</p>
         </div>
 
     </footer>
