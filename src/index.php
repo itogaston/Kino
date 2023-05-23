@@ -6,7 +6,7 @@ if (isset($_GET['page'])) {
     if (isset($_POST["page"])) {
         $page = $_POST['page'];
     } else {
-        $page = "logIn";
+        $page = "home";
     }
 }
 
@@ -16,7 +16,7 @@ if (isset($_GET['action'])) {
     if (isset($_POST["action"])) {
         $action = $_POST['action'];
     } else {
-        $action = "logIn";
+        $action = "home";
     }
 }
 
@@ -32,5 +32,7 @@ else if($page == "advSearch") {
 else if($page == "home") {
     include(__DIR__."/controllers/homeController.php");
 }
-
+else if($page == "list") {
+    include(__DIR__."/controllers/listController.php");
+}
 ?>

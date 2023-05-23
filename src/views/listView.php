@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../src/assets/cinema-center.png" type="image/x-icon">
     <link rel="stylesheet" href="../src/css/flickity.min.css">
-    <link rel="stylesheet" href="../src/css/home.css">
     <link rel="stylesheet" href="../src/css/tailwind.css">
     <script src="../src/js/flickity.pkgd.min.js"></script>
     <script src="../src/js/searchListener.js"></script>
@@ -44,51 +43,20 @@
     </header>
 
     <main class="bg-neutral-600 pt-5">
-
-        <section>
-            <div class="carousel-container sm:mx-16 md:mx-28 mb-10">
-                <div class="section-title flex flex-col items-center text-neutral-200 mb-4 text-xl sm:text-3xl sm:font-bold">
-                    <h2>Our selection</h2>
-                </div>
-
-                <div class="carousel" data-flickity='{ 
-                    "autoPlay": 3000, 
-                    "pauseAutoPlayOnHover": true, 
-                    "wrapAround": true,  
-                    "prevNextButtons": true,
-                    "pageDots": false
-                }'>
-                    <?php
-                        foreach( $moviesCarousel as $movie ){
-                            if($movie->getMoviePoster() == "N/A")
-                                    continue;
-                            echo ' <div class="gallery-cell">';
-                                echo '<img class="hover:scale-105 bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="" style="height: 308px; width: 200px">';
-                                echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
-                            echo '</div>';
-                        }
-                    ?>
-                </div>
-            </div>
-        </section>
-
-        <section class="flex justify-center m-6">
-            <div class="flex flex-col border-solid border-2 rounded-md border-neutral-200 shadow-2xl md:w-2/3 text-neutral-200">
-                <div class="text-center text-xl sm:text-3xl sm:font-bold m-2">
-                    <p>The Showcase</p>
-                </div>
-
-                <div class="flex flex-col sm:flex-row">
-                    <div class="mx-4 mb-4">
-                        <img class="hover:scale-105" src=<?php echo $showcaseMovie->getMoviePoster()?> alt="Poster for <?php echo $showcaseMovie->getMovieTitle()?>" srcset="">
-                    </div>
-                    <div class="mx-4">
-                        <div class="mb-4"><?php echo $showcaseMovie->getMovieTitle()?></div>
-                        <div><?php echo $showcaseMovie->getYear()?></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="results" class="flex flex-col items-center text-neutral-200 mb-4 text-xl sm:text-3xl sm:font-bold">
+            <div>Search Results</div>
+        </div>
+        <?php
+            foreach( $movieList as $movie ){
+                if($movie->getMoviePoster() == "N/A")
+                        continue;
+                echo ' <div class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl mx-20 my-10">';
+                    echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
+                    // echo '<span class="flex justify-center items-center text-neutral-200">Year '. $movie->getYear(). '</span>';
+                    echo '<img class="hover:scale-105 hover:cursor-pointer bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="">';
+                echo '</div>';
+            }
+        ?>
     </main>
 
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-fit sm:h-50">
