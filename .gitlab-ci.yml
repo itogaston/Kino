@@ -21,3 +21,4 @@ build_a:
   script:
     - echo "Compiling the code..."
     - git checkout dev
+    - git pull
