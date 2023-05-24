@@ -59,11 +59,24 @@
                 foreach( $movieList as $movie ){
                     if($movie->getMoviePoster() == "N/A")
                             continue;
-                    echo ' <div class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl w-72 h-fit mx-1 sm:mx-5 my-4">';
+                    echo'<form action="index.php">';
+                    echo ' <button type="submit" class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl w-72 h-fit mx-1 sm:mx-5 my-4">';
+                        
+                        echo '<label for="page"></label>';
+                        echo '<input type="text" value="reviews" name="page" class="hidden">';
+
+                        echo '<label for="title"></label>';
+                        echo '<input type="text" value="'.$movie->getMovieTitle().'" name="title" class="hidden">';
+
+                        echo '<label for="imdbID"></label>';
+                        echo '<input type="text" value="'.$movie->getMovieCode().'" name="imdbID" class="hidden">';
+
                         echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). ' ('. $movie->getYear().')</span>';
                         // echo '<span class="flex justify-center items-center text-neutral-200">Code '. $movie->getMovieCode(). '</span>';
                         echo '<img class="hover:scale-105 hover:cursor-pointer bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="">';
-                    echo '</div>';
+                        
+                    echo '</button>';
+                    echo '</form>';
                 }
                 echo '</div>';
             }

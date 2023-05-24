@@ -24,7 +24,7 @@
         $this->cod = $movieData['imdbID'];
         
         if(isset($movieData['Director'])){
-            $this->rating = $movieData['Rating'];
+            // $this->rating = $movieData['Rating'];
             $this->awards = $movieData['Awards'];
             $this->plot = $movieData['Plot'];
             $this->stars = $movieData['Actors'];
@@ -68,9 +68,9 @@
 
     public static function get_movie_with_title_and_id($imdb_id, $movie_title) {
     
-        $url = "http://www.omdbapi.com/?apikey=ce16ecd1";
+        $url = "https://www.omdbapi.com";
         
-        $request_url = $url . "&i=" . urlencode($imdb_id) . "&t=" . urlencode($movie_title). "&plot=" . urlencode('full') . "&r=" . urlencode('json');
+        $request_url = $url . "?i=" . urlencode($movie_title).  "&t=" . urlencode($imdb_id). '&apikey=ce16ecd1';
         
         $response = file_get_contents($request_url);
         $data = json_decode($response, true);
