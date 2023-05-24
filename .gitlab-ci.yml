@@ -21,6 +21,5 @@ build_a:
   script:
     - echo "Compiling the code..."
     - cd /var/www/html/grupo-ocelote
-    - git fetch
     - git checkout dev
     - git pull
