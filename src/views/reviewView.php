@@ -13,7 +13,7 @@
         <div class="movieInfo">
             <img class="movieImg" src=<?php echo $movie->getMoviePoster()?>>
             <div class="movieText">
-                <div class="headerDiv"><h1><?php echo $movie->getMovieTitle(); ?>></h1></div>
+                <div class="headerDiv"><h1><?php echo $movie->getMovieTitle()?></h1></div>
                 <h3>Directed by: <?php echo $movie->getMovieDirector()?></h3>
                 <h3>Starring: <?php echo $movie->getMovieStars() ?></h3>
             </div>  
