@@ -13,21 +13,20 @@ function searchMovie(){
     $imbdid_input = $_POST['imbdId'];
     $type_input = $_POST['typeSearch'];
 
-    echo($title_input.$year_input.$imbdid_input.$type_input);
 
-  if((isset($_POST['yearORel']))){
+  if((isset($_POST['yearORel'])) && ($year_input != "") ){
       if (!(isset($_POST['imbdId']))){
-        return Movie::get_movie_info_full_request($imbdid_input, $title_input, $type_input, $year_input);
+        return [Movie::get_movie_info_full_request($imbdid_input, $title_input, $type_input, $year_input)];
       }
       else{
-        return Movie::get_movie_info_full_request($imbdid_input, $title_input, $type_input, $year_input);
+        return [Movie::get_movie_info_full_request($imbdid_input, $title_input, $type_input, $year_input)];
       }
     }
-  
   else{
-    echo("2 \n");
     return Movie::getAllMovies($title_input);
   }
+    
+
 
   
       /* SI SE PREFIERE DEVOLVER ARRAY CON RESUTLTADOS SINMAS

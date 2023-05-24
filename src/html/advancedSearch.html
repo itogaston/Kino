@@ -18,8 +18,8 @@
         <div class="search-container">
             <form action="../index.php?page=advSearch&action=searchMovie" method="post">
 
-                <div  class="dropdown">
-                    <button id="activar"  title="Click to show more filters" class="dropbtn">Options</button>
+                <div class="dropdown">
+                    <div class="dropbtn" id="activar"  title="Click to show more filters" >Options</div>
                     <div class="dropdown-content" alt="Click for show more filters">
                         <a id="movie" href="#" onclick="changeText('Movie')">Movie</a></li>
                         <a id="serie" href="#" onclick="changeText('Series')">Series</a></li>
@@ -31,7 +31,9 @@
 
 
                 <input type="text" placeholder="Movie title..." name="movieTitle" required>
-                <button type="submit" value="Search">Search</button>
+                <button type="submit" value="Search">
+                    <img src="..\assets\searchIcon.png" alt="Search Icon">
+                </button>
 
 
                 <div class="search-options">

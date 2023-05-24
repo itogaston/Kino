@@ -1,13 +1,15 @@
 <?php
 
 include __DIR__."/../views/advancedSearchView.php";
+include __DIR__."/../views/movieListView.php";
 include __DIR__."/../models/advancedSearchModel.php";
 
+
 if($action == "searchMovie"){
-    $ListaPeliculas = searchMovie();
-    print_r($ListaPeliculas);
+
+    $movieList = searchMovie();
+    require_once "views/listView.php";
     
-    //pasar datos a nueva pagina lista de pelis
 }
 else if($action == "viewAdvancedSearch") {
     viewAdvancedSearch();

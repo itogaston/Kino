@@ -34,14 +34,33 @@ body{
 .search-container input[type="text"] {
   flex-grow: 1;
   border: 1px solid #ccc;
+  border-radius: 5%;
 
 }
 
 .search-container button {
-  width: 90px;
+  width: 50px;
+  height: 38px;
+  border-radius: 5%;
+  background-size: cover;
   background-color: #9855e1;
-  color: #fff;
   cursor: pointer;
+}
+
+.search-container button img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.dropbtn {
+    border-radius: 5%;
+    background-color: #9855e1;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 16px;
 }
 
 .search-options {
@@ -54,13 +73,14 @@ body{
 }
 
 .dropdown {
+  width: 86px;
   position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
   display: none;
-  width: 90px;
+  width: 86px;
   position: absolute;
   background-color: #c7a1ee;
   z-index: 1;
@@ -94,3 +114,7 @@ body{
   font-size: 16px;
 }
 
+@media (max-width: 767px) {
+  body {
+    width: 200;
+  }}
