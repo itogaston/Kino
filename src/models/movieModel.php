@@ -17,20 +17,21 @@
 
 
     public function __construct($movieData) {
+
         $this->titulo = $movieData['Title'];
         $this->year = $movieData['Year'];
-        $this->rating = $movieData['Rating'];
-        $this->awards = $movieData['Awards'];
-        $this->cod = $movieData['imdbID'];
-        $this->plot = $movieData['Plot'];
-        $this->stars = $movieData['Actors'];
         $this->poster = $movieData['Poster'];
-        $this->director = $movieData['Director'];
-        $this->writer = $movieData['Writer'];
-        $this->runtime = $movieData['Runtime'];
-        $this->genre = $movieData['Genre'];
-        $this->boxoffice = $movieData['BoxOffice'];
-        $this->awards = $movieData['Awards'];
+        //$this->rating = isset($movieData['Rating']) ;
+        // $this->awards = $movieData['Awards'];
+        // $this->cod = $movieData['imdbID'];
+        // $this->plot = $movieData['Plot'];
+        // $this->stars = $movieData['Actors'];
+        // $this->director = $movieData['Director'];
+        // $this->writer = $movieData['Writer'];
+        // $this->runtime = $movieData['Runtime'];
+        // $this->genre = $movieData['Genre'];
+        // $this->boxoffice = $movieData['BoxOffice'];
+        // $this->awards = $movieData['Awards'];
 
     }
 
@@ -55,7 +56,7 @@
         
         $url = "http://www.omdbapi.com/?apikey=ce16ecd1";
         
-        $request_url = $url . "&i=" . urlencode($imdb_id) . "&t=" . urlencode($movie_title) . "&type=" . urlencode($search_type) . "&y=" . urlencode($release_year) . "&plot=" . urlencode('long') . "&r=" . urlencode('json');
+        $request_url = $url . "&i=" . urlencode($imdb_id) . "&t=" . urlencode($movie_title) . "&type=" . urlencode($search_type) . "&y=" . urlencode($release_year) . "&plot=" . urlencode('full') . "&r=" . urlencode('json');
       
         $response = file_get_contents($request_url);
         $data = json_decode($response, true);
@@ -71,7 +72,7 @@
     public function getMovieTitle() {
         return $this->titulo;
     }
-    public function getYear($titulo) {
+    public function getYear() {
         return $this->year;
     }
 
@@ -141,7 +142,7 @@ function get_movie_infoWYear($movie_title, $release_year, $search_type) {
 
     $url = "http://www.omdbapi.com/?apikey=ce16ecd1";
     
-    $request_url = $url . "&t=" . urlencode($movie_title) . "&type=" . urlencode($search_type) . "&y=" . urlencode($release_year) . "&plot=" . urlencode('long') . "&r=" . urlencode('json');
+    $request_url = $url . "&t=" . urlencode($movie_title) . "&type=" . urlencode($search_type) . "&y=" . urlencode($release_year) . "&plot=" . urlencode('full') . "&r=" . urlencode('json');
     
     $response = file_get_contents($request_url);
     $data = json_decode($response, true);

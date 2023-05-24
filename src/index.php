@@ -16,7 +16,7 @@ if (isset($_GET['action'])) {
     if (isset($_POST["action"])) {
         $action = $_POST['action'];
     } else {
-        $action = "viewLogIn";
+        $action = "logIn";
     }
 }
 
@@ -26,4 +26,11 @@ if($page == "logIn") {
 else if($page == "signUp") {
     include(__DIR__."/controllers/signupController.php");
 }
+else if($page == "advSearch") {
+    include(__DIR__."/controllers/advancedSearchController.php");
+}
+else if($page == "home") {
+    include(__DIR__."/controllers/homeController.php");
+}
+
 ?>
