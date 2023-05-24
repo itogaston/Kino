@@ -37,8 +37,8 @@
             </form>
 
             <div class="basis-1/3 flex justify-center mr-2 sm:mr-3 mt-4 sm:mt-0 sm:justify-end">
-                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','logIn')">Register</div> 
-                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','logIn')">Login</div> 
+                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer" onclick="goTo('signUp','viewSignUp')">Sign Up</div> 
+                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','viewLogIn')">Log In</div> 
             </div>
         </div>
     </header>

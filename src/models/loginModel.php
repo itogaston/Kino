@@ -12,6 +12,7 @@ function logIn() {
         if ($data = $queryReturn->fetch_assoc()) {
             if($data["passwd"] == $passwd) {
                 echo "<script>alert('User logged correctly');</script>";
+                header("Refresh:5; url=http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=home&action=home");
             }
             else {
                 //header("Location: index.php?page=logIn&action=viewLogIn");

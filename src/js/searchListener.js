@@ -5,9 +5,9 @@ function searchKeyEvent(event) {
 }
 
 function goToList(text) {
-    window.location.href = "http://localhost:5500/src/index.php?page=list&text=" + text;
+    window.location.href = "http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=list&text=" + text;
 }
 
 function goTo(page, action) {
-    window.location.href = "http://localhost:5500/src/index.php?page=" + page + "&action=" + action;
+    window.location.href = "http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=" + page + "&action=" + action;
 }

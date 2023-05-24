@@ -35,4 +35,7 @@ else if($page == "home") {
 else if($page == "list") {
     include(__DIR__."/controllers/listController.php");
 }
+else if($page == "reviews") {
+    include(__DIR__."/controllers/reviewController.php");
+} 
 ?>
