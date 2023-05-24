@@ -46,17 +46,29 @@
         <div id="results" class="flex flex-col items-center text-neutral-200 mb-4 text-xl sm:text-3xl sm:font-bold">
             <div>Search Results</div>
         </div>
+        
         <?php
-            foreach( $movieList as $movie ){
-                if($movie->getMoviePoster() == "N/A")
-                        continue;
-                echo ' <div class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl mx-20 my-10">';
-                    echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
-                    // echo '<span class="flex justify-center items-center text-neutral-200">Year '. $movie->getYear(). '</span>';
-                    echo '<img class="hover:scale-105 hover:cursor-pointer bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="">';
+            if(!isset($movieList) || count($movieList) == 0){
+                echo '<div class="flex flex-col items-center my-10 sm:my-4">';
+                    echo '<p class="text-amber-400 text-lg">Oops, no results found...</p>';
+                    echo '<img src="../src/assets/scorsese.jpeg" alt="" srcset="">';
+                echo '</div>';
+            }
+            else{
+                echo '<div class="flex justify-center flex-wrap">';
+                foreach( $movieList as $movie ){
+                    if($movie->getMoviePoster() == "N/A")
+                            continue;
+                    echo ' <div class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl w-72 h-fit mx-1 sm:mx-5 my-4">';
+                        echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). ' ('. $movie->getYear().')</span>';
+                        // echo '<span class="flex justify-center items-center text-neutral-200">Code '. $movie->getMovieCode(). '</span>';
+                        echo '<img class="hover:scale-105 hover:cursor-pointer bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="">';
+                    echo '</div>';
+                }
                 echo '</div>';
             }
         ?>
+        
     </main>
 
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-fit sm:h-50">

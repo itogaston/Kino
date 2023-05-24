@@ -16,21 +16,23 @@
 
 <body class="bg-neutral-600">
     <header>
-        <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 mb-5 bg-neutral-400 pb-2">
-            <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7">
+        <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 bg-neutral-400 pb-2">
+            <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
                 <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
                 <h1 class="ml-3 hidden sm:block">C I N E</h1>
             </div>
 
-            <form action="/" class="mt-2 sm:mt-0 mx-2 sm:mx-0 order-3 sm:order-none w-full sm:basis-1/3 flex items-center justify-between rounded-md bg-violet-300 h-8"> 
+            <form action="index.php" class="mt-2 sm:mt-0 mx-2 sm:mx-0 order-3 sm:order-none w-full sm:basis-1/3 flex items-center justify-between rounded-md bg-violet-300 h-8"> 
+                <label for="page"></label>
+                <input type="text" value="list" name="page" class="hidden">
                 <div id="input-text-container" class="w-full">
                     <label for="title"></label>
                     <input class="bg-violet-300 border-none rounded-md h-8 w-full" 
-                        type="search" id="search-input" name="title" srcset="" onkeypress="searchKeyEvent(event)">
+                        type="search" id="search-input" name="title" srcset="">
                 </div>    
             
                 <button type="submit" class="mx-2">
-                    <img src="../src/assets/magnifying-glass-solid.svg" class="w-5 h-5" onclick="goToList()">
+                    <img src="../src/assets/magnifying-glass-solid.svg" class="w-5 h-5">
                 </button>
             </form>
 
@@ -41,7 +43,7 @@
         </div>
     </header>
 
-    <main class="bg-neutral-600">
+    <main class="bg-neutral-600 pt-5">
 
         <section>
             <div class="carousel-container sm:mx-16 md:mx-28 mb-10">
@@ -87,7 +89,7 @@
                 </div>
             </div>
         </section>
-        </main>
+    </main>
 
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-fit sm:h-50">
         <div class="logo-container flex items-center min-w-fit m-4">
