@@ -20,5 +20,6 @@ build_a:
   stage: build
   script:
     - echo "Compiling the code..."
+    - git fetch
     - git checkout dev
     - git pull
