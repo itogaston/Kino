@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/reviewSt.css" rel="stylesheet">
+    <link href="../src/css/base.css" rel="stylesheet">
+    <link href="../src/css/reviewSt.css" rel="stylesheet">
     <title><?php echo $movie->getMovieTitle() ?></title>
 </head>
 <body>
@@ -27,7 +27,7 @@
     <div class="reviewRelated">
         <div class="reviews">
             <div class="rev">
-                <img class="userIcon" src="../assets/user_icon.svg">
+                <img class="userIcon" src="../src/assets/user_icon.svg">
                 <div class="text">
                     <h1 class="author">Batman420</h1>
                     <p class="bodyText">
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="rev">
-                <img class="userIcon" src="../assets/user_icon.svg">
+                <img class="userIcon" src="../src/assets/user_icon.svg">
                 <div class="text">
                     <h1 class="author">Batman420</h1>
                     <p class="bodyText">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="rev">
-                <img class="userIcon" src="../assets/user_icon.svg">
+                <img class="userIcon" src="../src/assets/user_icon.svg">
                 <div class="text">
                     <h1 class="author">Batman420</h1>
                     <p class="bodyText">
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="rev">
-                <img class="userIcon" src="../assets/user_icon.svg">
+                <img class="userIcon" src="../src/assets/user_icon.svg">
                 <div class="text">
                     <h1 class="author">Batman420</h1>
                     <p class="bodyText">
@@ -71,6 +71,6 @@
             </form>
         </div>
     </div>
-    <script src="../js/reviews.js"></script>
+    <script src="../src/js/reviews.js"></script>
 </body>
 </html>

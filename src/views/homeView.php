@@ -37,8 +37,8 @@
             </form>
 
             <div class="basis-1/3 flex justify-center mr-2 sm:mr-3 mt-4 sm:mt-0 sm:justify-end">
-                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer" onclick="goTo('signUp','viewSignUp')">Sign Up</div> 
-                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','viewLogIn')">Log In</div> 
+                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('signUp','viewSignUp')">Sign Up</div> 
+                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('logIn','viewLogIn')">Log In</div> 
             </div>
         </div>
     </header>
@@ -62,10 +62,25 @@
                         foreach( $moviesCarousel as $movie ){
                             if($movie->getMoviePoster() == "N/A")
                                     continue;
-                            echo ' <div class="gallery-cell">';
-                                echo '<img class="hover:scale-105 bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="" style="height: 308px; width: 200px">';
-                                echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
-                            echo '</div>';
+                                echo'<form action="index.php">';
+
+                                echo ' <button type="submit" class="gallery-cell">';
+                                    echo '<label for="page"></label>';
+                                    echo '<input type="text" value="reviews" name="page" class="hidden">';
+            
+                                    echo '<label for="title"></label>';
+                                    echo '<input type="text" value="'.$movie->getMovieTitle().'" name="title" class="hidden">';
+            
+                                    echo '<label for="imdbID"></label>';
+                                    echo '<input type="text" value="'.$movie->getMovieCode().'" name="imdbID" class="hidden">';
+                                
+                                    echo '<img class="hover:scale-105 bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="" style="height: 308px; width: 200px">';
+                                    echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
+                                echo '</button>';
+
+                                echo '</form>';
+
+                            
                         }
                     ?>
                 </div>
@@ -78,7 +93,18 @@
                     <p>The Showcase</p>
                 </div>
 
-                <div class="flex flex-col sm:flex-row">
+                <form action="index.php">
+                <label for="page"></label>
+                <input type="text" value="reviews" name="page" class="hidden">
+
+                <label for="title"></label>
+                <input type="text" value="<?php echo $showcaseMovie->getMovieTitle()?>" name="title" class="hidden">
+
+                <label for="imdbID"></label>
+                <input type="text" value="<?php echo $showcaseMovie->getMovieCode()?>" name="imdbID" class="hidden">
+
+
+                <button type="submit" class="flex flex-col sm:flex-row">
                     <div class="mx-4 mb-4">
                         <img class="hover:scale-105" src=<?php echo $showcaseMovie->getMoviePoster()?> alt="Poster for <?php echo $showcaseMovie->getMovieTitle()?>" srcset="">
                     </div>
@@ -86,7 +112,8 @@
                         <div class="mb-4"><?php echo $showcaseMovie->getMovieTitle()?></div>
                         <div><?php echo $showcaseMovie->getYear()?></div>
                     </div>
-                </div>
+                </button>
+                </form>
             </div>
         </section>
     </main>

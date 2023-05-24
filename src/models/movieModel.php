@@ -25,15 +25,15 @@
         
         if(isset($movieData['Director'])){
             // $this->rating = $movieData['Rating'];
-            $this->awards = $movieData['Awards'];
+            // $this->awards = $movieData['Awards'];
             $this->plot = $movieData['Plot'];
             $this->stars = $movieData['Actors'];
             $this->director = $movieData['Director'];
-            $this->writer = $movieData['Writer'];
-            $this->runtime = $movieData['Runtime'];
-            $this->genre = $movieData['Genre'];
-            $this->boxoffice = $movieData['BoxOffice'];
-            $this->awards = $movieData['Awards'];
+            // $this->writer = $movieData['Writer'];
+            // $this->runtime = $movieData['Runtime'];
+            // $this->genre = $movieData['Genre'];
+            // $this->boxoffice = $movieData['BoxOffice'];
+            // $this->awards = $movieData['Awards'];
         }
         else{
             $this->rating = "N/A";
