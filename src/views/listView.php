@@ -59,7 +59,7 @@
                 foreach( $movieList as $movie ){
                     if($movie->getMoviePoster() == "N/A")
                             continue;
-                    echo ' <div class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl w-72 h-fit mx-5 my-4">';
+                    echo ' <div class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl w-72 h-fit mx-1 sm:mx-5 my-4">';
                         echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). ' ('. $movie->getYear().')</span>';
                         // echo '<span class="flex justify-center items-center text-neutral-200">Code '. $movie->getMovieCode(). '</span>';
                         echo '<img class="hover:scale-105 hover:cursor-pointer bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="">';
