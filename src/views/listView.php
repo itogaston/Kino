@@ -14,7 +14,7 @@
 </head>
 
 <body class="bg-neutral-600">
-    <header>
+<header>
         <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 bg-neutral-400 pb-2">
             <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
                 <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
@@ -36,8 +36,8 @@
             </form>
 
             <div class="basis-1/3 flex justify-center mr-2 sm:mr-3 mt-4 sm:mt-0 sm:justify-end">
-                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','logIn')">Register</div> 
-                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer" onclick="goTo('logIn','logIn')">Login</div> 
+                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('signUp','viewSignUp')">Sign Up</div> 
+                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('logIn','viewLogIn')">Log In</div> 
             </div>
         </div>
     </header>
