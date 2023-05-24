@@ -26,4 +26,4 @@ tailwindcss -o src/css/tailwind.css --watch
 - Adrian Guiral Mallart
 - Iñigo Gastón Martínez
 - Fermin Elcano Barbero
-````
+
