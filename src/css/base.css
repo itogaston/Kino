@@ -5,7 +5,7 @@
     /*fuentes nueva*/
 }
 
---root{
+:root{
     --fondo: #14181c;
     --headerMenu: #21282f;
     --textTitle: white;
