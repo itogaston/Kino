@@ -21,5 +21,6 @@ build_a:
   script:
     - echo "Compiling the code..."
     - cd /var/www/html/grupo-ocelote
+    - git config --global --add safe.directory /var/www/html/grupo-ocelote
     - git checkout dev
     - git pull
