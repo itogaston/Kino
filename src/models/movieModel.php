@@ -21,18 +21,32 @@
         $this->titulo = $movieData['Title'];
         $this->year = $movieData['Year'];
         $this->poster = $movieData['Poster'];
-        //$this->rating = isset($movieData['Rating']) ;
-        // $this->awards = $movieData['Awards'];
-        // $this->cod = $movieData['imdbID'];
-        // $this->plot = $movieData['Plot'];
-        // $this->stars = $movieData['Actors'];
-        // $this->director = $movieData['Director'];
-        // $this->writer = $movieData['Writer'];
-        // $this->runtime = $movieData['Runtime'];
-        // $this->genre = $movieData['Genre'];
-        // $this->boxoffice = $movieData['BoxOffice'];
-        // $this->awards = $movieData['Awards'];
-
+        $this->cod = $movieData['imdbID'];
+        
+        if(isset($movieData['Director'])){
+            $this->rating = $movieData['Rating'];
+            $this->awards = $movieData['Awards'];
+            $this->plot = $movieData['Plot'];
+            $this->stars = $movieData['Actors'];
+            $this->director = $movieData['Director'];
+            $this->writer = $movieData['Writer'];
+            $this->runtime = $movieData['Runtime'];
+            $this->genre = $movieData['Genre'];
+            $this->boxoffice = $movieData['BoxOffice'];
+            $this->awards = $movieData['Awards'];
+        }
+        else{
+            $this->rating = "N/A";
+            $this->awards = "N/A";
+            $this->plot = "N/A";
+            $this->stars = "N/A";
+            $this->director = "N/A";
+            $this->writer = "N/A";
+            $this->runtime = "N/A";
+            $this->genre = "N/A";
+            $this->boxoffice = "N/A";
+            $this->awards = "N/A";
+        }
     }
 
     public static function getAllMovies($titulo) {
@@ -73,52 +87,87 @@
         return $this->titulo;
     }
     public function getYear() {
-        return $this->year;
+        if($this->year != "N/A")
+            return $this->year;
+        else
+            return "-";
     }
 
     public function getMovieCode() {
-        return $this->cod;
+        if($this->cod != "N/A")
+            return $this->cod;
+        else
+            return "-";
     }
 
     public function getMoviePlot() {
-        return $this->plot;
+        if($this->plot != "N/A")
+            return $this->plot;
+        else
+            return "-";
     }
 
     public function getMovieStars(){
-        return $this->stars;
+        if($this->stars != "N/A")
+            return $this->stars;
+        else
+            return "-";
     }
     public function getMoviePoster(){
-        return $this->poster;
+        if($this->poster != "N/A")
+            return $this->poster;
+        else
+            return "-";
     }
 
     public function getMovieDirector(){
-        return $this->director;
+        if($this->director != "N/A")
+            return $this->director;
+        else
+            return "-";
     }
 
-    public function getMovieWriter($titulo,$year){
-        return $this->writer;
+    public function getMovieWriter(){
+        if($this->writer != "N/A")
+            return $this->writer;
+        else
+            return "-";
     }
 
-    public function getMovieRuntime($titulo,$year){
-        return $this->runtime;
+    public function getMovieRuntime(){
+        if($this->runtime != "N/A")
+            return $this->runtime;
+        else
+            return "-";
     }
 
-    public function getMovieGenre($titulo,$year){
-        return $this->genre;
+    public function getMovieGenre(){
+        if($this->genre != "N/A")
+            return $this->genre;
+        else
+            return "-";
     }
 
-    public function getMovieBoxOffice($titulo,$year){
-        return $this->boxoffice;
+    public function getMovieBoxOffice(){
+        if($this->boxoffice != "N/A")
+            return $this->boxoffice;
+        else
+            return "-";
     }
 
-    public function getMovieAwards($titulo,$year){
-        return $this->awards;
+    public function getMovieAwards(){
+        if($this->awards != "N/A")
+            return $this->awards;
+        else
+            return "-";
     }
 
     public function getMovieRating(){
-        return $this->rating;
+        if($this->rating != "N/A")
+            return $this->rating;
+        else
+            return "-";
     }
-
  }
 
 
