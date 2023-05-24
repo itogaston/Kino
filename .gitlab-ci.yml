@@ -20,6 +20,7 @@ build_a:
   stage: build
   script:
     - echo "Compiling the code..."
-    - git config --global --add safe.directory /var/www/html/grupo-ocelote
+    - cd /var/www/html/grupo-ocelote
+    - git config --global user.name guiral.132137 
     - git checkout dev
     - git pull
