@@ -26,15 +26,21 @@
     </div>
     <div class="reviewRelated">
         <div class="reviews">
-            <div class="rev">
-                <img class="userIcon" src="../src/assets/user_icon.svg">
-                <div class="text">
-                    <h3 class="author">Batman420</h3>
-                    <p class="bodyText">
-                        Mierdon de pelicula *fueguito*
-                    </p>
-                </div>
-            </div>
+        <?php
+            foreach( $review as $review ){
+            echo '<div class="rev">';
+                echo '<img class="userIcon" src="../src/assets/user_icon.svg">';
+                echo '<div class="text">';
+                
+                echo '<h3 class="author">'.$review['author'].'</h3>';
+                echo '<p class="bodyText">';
+                    echo $review['text'];
+                echo '</p>';
+                
+                echo '</div>';
+            echo '</div>';
+            }
+            ?>
         </div>
         <div class="writeReview" id="reviewText">
             <form action='<?php echo "index.php?page=reviews&action=submitReview&title=".$movie->getMovieTitle()."&imdbID=".$movie->getMovieCode() ?>' method="post">
