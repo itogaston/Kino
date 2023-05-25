@@ -1,5 +1,7 @@
 <?php
+
 include "singletonDB.php";
+
 function logIn() {    
     $singleton = SingletonDB::getInstance();
     $con = $singleton->getConnection();
@@ -11,6 +13,10 @@ function logIn() {
     if ($queryReturn = $con->query($selectQuery)) {
         if ($data = $queryReturn->fetch_assoc()) {
             if($data["passwd"] == $passwd) {
+                session_start();
+                $_SESSION['user'] = $user;
+                $_SESSION['passwd'] = $passwd;
+                $_SESSION['id'] = $data["id"];  
                 echo "<script>alert('User logged correctly');</script>";
                 header("Refresh:0; url=http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=home&action=home");
             }

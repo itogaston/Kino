@@ -8,13 +8,21 @@ function submitReview($movie) {
     $text = $_POST['review'];
     $title = $movie->getMovieCode();
 
-    $insertQuery = "insert into reviews (author, movie, text) values (1, '$title', '$text')";
+    session_start();
 
-    if ($queryReturn = $con->query($insertQuery)) {
-        header("Location: index.php?page=reviews&action=viewReviewPage&title=".$movie->getMovieTitle()."&imdbID=".$movie->getMovieCode());
-    } else {
-        echo "<script>alert('DB Insert ERROR');</script>";
+    if(isset($_SESSION['user']) && isset($_SESSION['passwd'])) {
+        $userId = $_SESSION['id'];
+        $insertQuery = "insert into reviews (author, movie, text) values ('$userId', '$title', '$text')";
+        if ($queryReturn = $con->query($insertQuery)) {
+            header("Location: index.php?page=reviews&action=viewReviewPage&title=".$movie->getMovieTitle()."&imdbID=".$movie->getMovieCode());
+        } else {
+            echo "<script>alert('DB Insert ERROR');</script>";
+        }
     }
+    else {
+        echo "<script>alert('Log in to submit reviews');</script>";
+        header("Refresh:0; url=http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=reviews&action=viewReviewPage&title=".$movie->getMovieTitle()."&imdbID=".$movie->getMovieCode());
+    }  
 }
 
 function getReviews($movie){
