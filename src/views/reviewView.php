@@ -11,7 +11,7 @@
 <body>
     <div class="movie">
         <div class="movieInfo">
-            <img class="movieImg" src=<?php echo $movie->getMoviePoster()?>>
+            <img alt=<?php echo $movie->getMovieTitle() ?> class="movieImg" src=<?php echo $movie->getMoviePoster()?>>
             <div class="movieText">
                 <div class="headerDiv"><h1><?php echo $movie->getMovieTitle()?></h1></div>
                 <h3>Directed by: <?php echo $movie->getMovieDirector()?></h3>
@@ -29,42 +29,18 @@
             <div class="rev">
                 <img class="userIcon" src="../src/assets/user_icon.svg">
                 <div class="text">
-                    <h1 class="author">Batman420</h1>
+                    <h3 class="author">Batman420</h3>
                     <p class="bodyText">
                         Mierdon de pelicula *fueguito*
-                    </p>
-                </div>
-            </div>
-            <div class="rev">
-                <img class="userIcon" src="../src/assets/user_icon.svg">
-                <div class="text">
-                    <h1 class="author">Batman420</h1>
-                    <p class="bodyText">
-                        Mierdon de pelicula *fueguito* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    </p>
-                </div>
-            </div>
-            <div class="rev">
-                <img class="userIcon" src="../src/assets/user_icon.svg">
-                <div class="text">
-                    <h1 class="author">Batman420</h1>
-                    <p class="bodyText">
-                        No amigo, no. Lo dejaste en el suelo. Si la muerte se pudiera representar por niveles como los pisos del infierno, tendrían que crear al menos 5829 niveles por debajo del último para meterle a él. ¿Eres acaso consciente del poder de humillación que tenía ese insulto? De hecho, es tan ingenioso que iba a llamar a la policía al ser testigo de un homicidio, pero al ver la estructura tán elaborada y la complejidad de tu insulto, preferí no decir nada para conservar este arma letal como un secreto. En un caso hipotético en el que hubiera llamado al FBI o relacionados y les hubiera explicado el caso, habrían venido todos los oficiales de la Tierra para detenerte, y te habrían puesto una cadena perpetua múltiple con tortura incluída; es decir, después de la muerte te revivirían para que siguieres cumpliendo la condena. Ahora que soy consciente de la existencia de estas palabras malherientes, temeré toda mi vida que tú u otra persona utilicen estos versos prohibidos por segunda vez y le pongan un fin al universo tal y como lo conocemos.
-                    </p>
-                </div>
-            </div>
-            <div class="rev">
-                <img class="userIcon" src="../src/assets/user_icon.svg">
-                <div class="text">
-                    <h1 class="author">Batman420</h1>
-                    <p class="bodyText">
-                        Mierdon de pelicula *fueguito* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                     </p>
                 </div>
             </div>
         </div>
         <div class="writeReview" id="reviewText">
             <form action="index.php?accion=login&id=2" method="post">
+                <button type="submit" class="submitButton" value="Search">
+                <svg class="submitButtonImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                </button>
                 <div class="inputText">
                     <textarea rows="1" id="input" type="text" name="review" placeholder="Write review..." required></textarea>
                 </div>

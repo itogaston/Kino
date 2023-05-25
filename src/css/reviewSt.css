@@ -112,16 +112,27 @@ form, .inputText {
     width: 100%;
 }
 
-.inputText textarea {
+.inputText {
     height: 100%;
-    width: 100%;
+    width: 80%;
     border: 10px;
     text-align: center;
     font-size: 13px;
     color: var(--textBase);
     background: var(--headerMenu);
     border-radius: 10px;
+    margin-left: auto;
 }
+
+textarea {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: var(--textBase);
+    background: var(--headerMenu);
+    border-radius: 10px;
+} 
 
 textarea:hover {
     transform: scale(1.02);
@@ -188,6 +199,35 @@ textarea:hover {
     color: var(--textBase);
     font-size: 16px;
 }
+
+.submitButton {
+    width: 40px;
+    height: 40px;
+    background-color: var(--hover);
+    border: 0px;
+    border-radius: 5px;
+} 
+
+.submitButtonImg {
+    width: 95%;
+    height: 95%;
+    align-self: center;
+    fill: white;
+} 
+
+.submitButton:hover {
+    transform: scale(1.1);
+}
+
+.submitButton:checked {
+    transform: scale(0.9);
+} 
+
+form {
+    display: flex;
+    align-content: space-between;
+
+} 
 
 @media only screen and (min-width: 800px) {
     
