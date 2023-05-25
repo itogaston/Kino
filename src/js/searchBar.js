@@ -26,4 +26,8 @@ function changeText(option) {
     document.getElementById("opcionBusqueda").value = option;
   }
 
+  function goTo(page, action) {
+    window.location.href = "http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=" + page + "&action=" + action;
+}
+
 
