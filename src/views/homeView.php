@@ -18,7 +18,7 @@
     <header>
         <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 bg-neutral-400 pb-2">
             <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
-                <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
+                <img src="../src/assets/glue.svg" alt="" srcset="" alt="Logo" width="100px" height="60px">
                 <h1 class="ml-3 hidden sm:block">C I N E</h1>
             </div>
 
@@ -32,13 +32,24 @@
                 </div>    
             
                 <button type="submit" class="mx-2">
-                    <img src="../src/assets/magnifying-glass-solid.svg" class="w-5 h-5">
+                    <img src="../src/assets/magnifying-glass-solid.svg" width="20px" height="20px" alt="magnifying glass">
+                </button>
+            </form>
+            <form action="index.php" class="mx-1"> 
+                <label for="page" class="hidden"></label>
+                <input type="text" value="advSearch" name="page" class="hidden">  
+
+                <label for="action" class="hidden"></label>
+                <input type="text" value="viewAdvancedSearch" name="action" class="hidden">  
+
+                <button type="submit" class="flex  mx-2 text-amber-400">
+                    <img src="../src/assets/magnifying-glass-plus-solid.svg" width="20px" height="20px" alt="magnifying glass">
                 </button>
             </form>
 
             <div class="basis-1/3 flex justify-center mr-2 sm:mr-3 mt-4 sm:mt-0 sm:justify-end">
-                <div class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('signUp','viewSignUp')">Sign Up</div> 
-                <div class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('logIn','viewLogIn')">Log In</div> 
+                <button class="bg-amber-400 rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('signUp','viewSignUp')">Sign Up</button> 
+                <button class="bg-amber-400 rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('logIn','viewLogIn')">Log In</button> 
             </div>
         </div>
     </header>
@@ -74,7 +85,7 @@
                                     echo '<label for="imdbID"></label>';
                                     echo '<input type="text" value="'.$movie->getMovieCode().'" name="imdbID" class="hidden">';
                                 
-                                    echo '<img class="hover:scale-105 bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="" srcset="" style="height: 308px; width: 200px">';
+                                    echo '<img class="hover:scale-105 bg-neutral-600" src="'.$movie->getMoviePoster().'" alt="'.$movie->getMovieTitle().' poster" srcset="" height="308px" width="200px">';
                                     echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). '</span>';
                                 echo '</button>';
 
@@ -106,7 +117,7 @@
 
                 <button type="submit" class="flex flex-col sm:flex-row">
                     <div class="mx-4 mb-4">
-                        <img class="hover:scale-105" src=<?php echo $showcaseMovie->getMoviePoster()?> alt="Poster for <?php echo $showcaseMovie->getMovieTitle()?>" srcset="">
+                        <img class="hover:scale-105" src="<?php echo $showcaseMovie->getMoviePoster()?>" alt="Poster for <?php echo $showcaseMovie->getMovieTitle()?>" srcset="" width="300px" height="444px">
                     </div>
                     <div class="mx-4">
                         <div class="mb-4"><?php echo $showcaseMovie->getMovieTitle()?></div>
@@ -120,7 +131,7 @@
 
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-fit sm:h-50">
         <div class="logo-container flex items-center min-w-fit m-4">
-            <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
+            <img src="../src/assets/glue.svg" alt="company logo" srcset="" width="100px" height="60px">
             <p class="ml-3 block">C I N E</p>
         </div>
 
