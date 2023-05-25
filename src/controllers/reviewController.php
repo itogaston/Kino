@@ -13,7 +13,7 @@ else{
         submitReview($movie);
     }
     else if($action == "viewReviewPage") {
-        //getReviews($movie);
+        $reviews = getReviews($movie);
         require_once "views/reviewView.php";  
     }  
     else {
