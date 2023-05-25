@@ -260,8 +260,8 @@ form {
         font-size: 18px;
     }
     .movieImg {
-        height: auto;
-        width: 80%;
+        height: 100%;
+        width: 250px;
     }
     
     .movie {
