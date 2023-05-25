@@ -1,10 +1,11 @@
-html {
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
+    background: var(--headerMenu);
 }
 
-body {
+main {
     height: 94%;
     padding: 6%;
     display: flex;
@@ -13,6 +14,20 @@ body {
     flex-direction: column;
     background: var(--fondo);
 }
+
+header, .homeButtonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--headerMenu);
+} 
+
+.homeButton {
+    display: flex;
+    align-items: center;
+    background: var(--headerMenu);
+    border: 0px;
+} 
 
 .movie {
     height: 50%;
@@ -333,7 +348,7 @@ form {
         height: 10%;
     }
 
-    body {
+    main {
         height: 98%;
         padding: 2%;
         align-items: start;
