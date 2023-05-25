@@ -1,4 +1,8 @@
-# MVC
+# WEB URL
+
+http://eim-alu-69044.lab.unavarra.es/grupo-ocelote
+
+## MVC
 
 - Controllers -> Front Controller + page controllers
 - Model -> Encapsulated bussiness logic in different files
