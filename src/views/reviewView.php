@@ -27,12 +27,12 @@
     <div class="reviewRelated">
         <div class="reviews">
         <?php
-            foreach( $review as $review ){
+            foreach( $reviews as $review ){
             echo '<div class="rev">';
                 echo '<img class="userIcon" src="../src/assets/user_icon.svg">';
                 echo '<div class="text">';
                 
-                echo '<h3 class="author">'.$review['author'].'</h3>';
+                echo '<h3 class="author">'.$review['userName'].'</h3>';
                 echo '<p class="bodyText">';
                     echo $review['text'];
                 echo '</p>';

@@ -184,6 +184,7 @@ textarea:hover {
 }
 
 .author {
+    margin: 0;
     text-align: start;
     color: var(--textTitle);
     background-color: var(--hover);
