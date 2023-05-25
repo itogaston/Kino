@@ -14,19 +14,19 @@
 </head>
 
 <body class="bg-neutral-600">
-    <header>
+<header>
         <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 bg-neutral-400 pb-2">
-            <div class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
+            <button class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
                 <img src="../src/assets/glue.svg" alt="" srcset="" alt="Logo" width="100px" height="60px">
                 <h1 class="ml-3 hidden sm:block">C I N E</h1>
-            </div>
+            </button>
 
             <form action="index.php" class="mt-2 sm:mt-0 mx-2 sm:mx-0 order-3 sm:order-none w-full sm:basis-1/3 flex items-center justify-between rounded-md bg-violet-300 h-8"> 
-                <label for="page"></label>
-                <input type="text" value="list" name="page" class="hidden">
+                <label for="page-searchBar"></label>
+                <input id="page-searchBar" type="text" value="list" name="page" class="hidden">
                 <div id="input-text-container" class="w-full">
-                    <label for="title"></label>
-                    <input class="bg-violet-300 border-none rounded-md h-8 w-full" 
+                    <label for="title-searchBar"></label>
+                    <input id="title-searchBar" class="bg-violet-300 border-none rounded-md h-8 w-full" 
                         type="search" id="search-input" name="title" srcset="">
                 </div>    
             
@@ -35,14 +35,14 @@
                 </button>
             </form>
             <form action="index.php" class="mx-1"> 
-                <label for="page" class="hidden"></label>
-                <input type="text" value="advSearch" name="page" class="hidden">  
+                <label for="page-adv" class="hidden" name="page"></label>
+                <input id="page-adv" type="text" value="advSearch" name="page-adv" class="hidden">  
 
-                <label for="action" class="hidden"></label>
-                <input type="text" value="viewAdvancedSearch" name="action" class="hidden">  
+                <label for="action-adv" class="hidden" name="action"></label>
+                <input id="action-adv" type="text" value="viewAdvancedSearch" name="action" class="hidden">  
 
                 <button type="submit" class="flex  mx-2 text-amber-400">
-                    <img src="../src/assets/magnifying-glass-plus-solid.svg" width="20px" height="20px" alt="magnifying glass">
+                    <img src="../src/assets/magnifying-glass-plus-solid.svg" width="20px" height="20px" alt="magnifying glass advance search">
                 </button>
             </form>
 
@@ -52,6 +52,7 @@
             </div>
         </div>
     </header>
+
 
     <main class="bg-neutral-600 pt-5">
         <div id="results" class="flex flex-col items-center text-neutral-200 mb-4 text-xl sm:text-3xl sm:font-bold">
@@ -66,6 +67,7 @@
                 echo '</div>';
             }
             else{
+                $index = 0;
                 echo '<div class="flex justify-center flex-wrap">';
                 foreach( $movieList as $movie ){
                     if($movie->getMoviePoster() == "N/A")
@@ -73,14 +75,17 @@
                     echo'<form action="index.php">';
                     echo ' <button type="submit" class="border-solid border-2 rounded-md border-neutral-200 shadow-2xl w-72 h-fit mx-1 sm:mx-5 my-4">';
                         
-                        echo '<label for="page"></label>';
-                        echo '<input type="text" value="reviews" name="page" class="hidden">';
+                        echo '<label for="page-'.$index.'"></label>';
+                        echo '<input id="page-'.$index.'" type="text" value="reviews" name="page" class="hidden">';
 
-                        echo '<label for="title"></label>';
-                        echo '<input type="text" value="'.$movie->getMovieTitle().'" name="title" class="hidden">';
+                        echo '<label for="action-'.$index.'"></label>';
+                        echo '<input id ="action-'.$index.'" type="text" value="viewReviewPage" name="action" class="hidden">';
 
-                        echo '<label for="imdbID"></label>';
-                        echo '<input type="text" value="'.$movie->getMovieCode().'" name="imdbID" class="hidden">';
+                        echo '<label for="title-'.$index.'"></label>';
+                        echo '<input id="title-'.$index.'" type="text" value="'.$movie->getMovieTitle().'" name="title" class="hidden">';
+
+                        echo '<label for="imdbID-'.$index.'"></label>';
+                        echo '<input id="imdbID-'.$index.'" type="text" value="'.$movie->getMovieCode().'" name="imdbID" class="hidden">';
 
                         echo '<span class="flex justify-center items-center bg-neutral-400 w-full p-2 h-16">'. $movie->getMovieTitle(). ' ('. $movie->getYear().')</span>';
                         // echo '<span class="flex justify-center items-center text-neutral-200">Code '. $movie->getMovieCode(). '</span>';
@@ -88,6 +93,7 @@
                         
                     echo '</button>';
                     echo '</form>';
+                    $index += 1;
                 }
                 echo '</div>';
             }
@@ -97,18 +103,18 @@
 
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-gradient-to-tr to-90% to-neutral-600 from-neutral-950 text-neutral-300 h-fit sm:h-50">
         <div class="logo-container flex items-center min-w-fit m-4">
-            <img src="../src/assets/glue.svg" alt="" srcset="" width="100px">
+            <img src="../src/assets/glue.svg" alt="company logo" srcset="" width="100px" height="60px">
             <p class="ml-3 block">C I N E</p>
         </div>
 
         <div class="flex flex-col w-52 m-4 text-center">
-            <p class="mb-2 underline text-lg">Contact us</p>
+            <p class="mb-2 text-lg sm:text-xl">Contact us</p>
 
             
         </div>
 
         <div class="resources w-52 m-4 text-center">
-            <p class="mb-2 underline text-lg">Resources</p>
+            <p class="mb-2 text-lg sm:text-xl">Resources</p>
 
             <div>
                 <a class="group flex flex-row justify-between items-center my-1" href="https://eim-laboratoriovirtual.unavarra.es/gitlab/ingweb2023/grupo-ocelote">
@@ -130,7 +136,7 @@
         </div>
 
         <div class="location w-52 m-4 text-center">
-            <p class="mb-2 underline text-lg">Location</p>
+            <p class="mb-2 text-lg sm:text-xl">Location</p>
             <p>Av. Cataluña, 31006</p>
             <p>Pamplona, Navarra</p>
         </div>

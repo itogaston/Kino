@@ -1,5 +1,6 @@
 <?php
 require_once "models/movieModel.php";
+
 if(!isset($_GET['title']) || !isset($_GET['imdbID'])){
     require_once "controllers/homeController.php";
 }
