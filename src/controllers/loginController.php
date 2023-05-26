@@ -9,6 +9,9 @@ if($action == "logIn"){
 else if($action == "viewLogIn") {
     viewLogIn();
 }  
+else if($action == "logOut") {
+    logOut();
+} 
 else {
     echo "nada";
 }

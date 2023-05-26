@@ -34,4 +34,12 @@ function logIn() {
         echo "<script>alert('DB Select ERROR');</script>";
     }
 }
+
+function logOut() {
+    session_start();
+    if(isset($_SESSION['user'])) {
+        session_destroy();
+    } 
+    header("Refresh:0; url=http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=home&action=home");
+} 
 ?>
