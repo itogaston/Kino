@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Special data for each movie, leave your opinion and see what others have to say about it">
     <link href="../src/css/base.css" rel="stylesheet">
     <link href="../src/css/reviewSt.css" rel="stylesheet">
     <title><?php echo $movie->getMovieTitle() ?></title>

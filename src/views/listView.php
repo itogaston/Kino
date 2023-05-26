@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="List of movies based on your search and you might like">
     <link rel="icon" href="../src/assets/cinema-center.png" type="image/x-icon">
     <link rel="stylesheet" href="../src/css/flickity.min.css">
     <link rel="stylesheet" href="../src/css/tailwind.css">
     <script src="../src/js/flickity.pkgd.min.js"></script>
     <script src="../src/js/searchListener.js"></script>
-    <title>C I N E</title>
+    <title>K I N O - Search</title>
 </head>
 
 <body class="bg-fondo text-textTitle">
@@ -18,7 +19,7 @@
         <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 bg-headerMenu pb-2 mr-4">
             <button class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
                 <img src="../src/assets/glue.svg" alt="" srcset="" alt="Logo" width="100px" height="60px">
-                <h1 class="ml-3 hidden sm:block text-textTitle">C I N E</h1>
+                <h1 class="ml-3 hidden sm:block text-textTitle">K I N O</h1>
             </button>
 
             <div class="mt-2 flex-row-reverse sm:flex-row sm:mt-0 mx-2 sm:mx-0 order-3 sm:order-none w-full sm:basis-1/3 flex items-center justify-between rounded-md h-8">
@@ -106,7 +107,7 @@
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-fondo h-fit sm:h-50">
         <div class="logo-container flex items-center min-w-fit m-4">
             <img src="../src/assets/glue.svg" alt="company logo" srcset="" width="100px" height="60px">
-            <p class="ml-3 block">C I N E</p>
+            <p class="ml-3 block">K I N O</p>
         </div>
 
         <div class="flex flex-col w-52 m-4 text-center">

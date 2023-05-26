@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page for cinema fans, search your favourite movies and comment your opinion as you read what others have to say about them">
     <link rel="icon" href="../src/assets/cinema-center.png" type="image/x-icon">
     <link rel="stylesheet" href="../src/css/flickity.min.css">
     <link rel="stylesheet" href="../src/css/home.css">
@@ -142,13 +143,14 @@
     <footer class="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center sm:items-start py-8 sm:py-0 sm:pt-8 bg-textBase to-80% to-textBase from-hover h-fit sm:h-50">
         <div class="logo-container flex items-center min-w-fit m-4">
             <img src="../src/assets/glue.svg" alt="company logo" srcset="" width="100px" height="60px">
-            <p class="ml-3 block">C I N E</p>
+            <p class="ml-3 block">K I N O</p>
         </div>
 
         <div class="flex flex-col w-52 m-4 text-center">
-            <p class="mb-2 text-lg sm:text-xl">Contact us</p>
-
-            
+            <p class="mb-2 text-lg sm:text-xl">About us</p>
+            <p>
+                Scorsese values storytelling but worries about commercial dominance in new cinema. Fan made page for authentic kino enjoyers.
+            </p>
         </div>
 
         <div class="resources w-52 m-4 text-center">
