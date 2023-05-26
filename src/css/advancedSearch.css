@@ -20,6 +20,12 @@ body{
    justify-content: center;
 }
 
+.homeButtonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} 
+
 .search-container {
   margin-top: 150px;
   height: 200px;

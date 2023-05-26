@@ -3,7 +3,7 @@ const boton = document.getElementById("activar");
 const botonOcultar = document.getElementById("hidebut")
 const año = document.getElementById("bus1");
 const imdbid = document.getElementById("bus2");
-
+var homeButton = document.getElementById("homeButton");
 
 boton.addEventListener('click', function() {
     if ((año.style.display = 'none') && (imdbid.style.display = 'none')) {
@@ -29,5 +29,16 @@ function changeText(option) {
   function goTo(page, action) {
     window.location.href = "http://eim-alu-69044.lab.unavarra.es/grupo-ocelote/src/index.php?page=" + page + "&action=" + action;
 }
+
+homeButton.addEventListener("mouseover", (event) => {
+    homeButton.style.cursor = "pointer";
+    var homeImg = document.getElementById("homeImg"); 
+    homeImg.src = "../assets/glue_2.svg";
+});
+
+homeButton.addEventListener("mouseout", (event) => {
+    var homeImg = document.getElementById("homeImg"); 
+    homeImg.src = "../assets/glue.svg";
+});
 
 

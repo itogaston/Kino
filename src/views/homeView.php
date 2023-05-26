@@ -48,7 +48,6 @@
                     </button>
                 </form>
             </div>
-
             <div class="basis-1/3 flex justify-center mr-2 sm:mr-3 mt-4 sm:mt-0 sm:justify-end text-textTitle">
                 <button class="bg-hover hover:bg-textBase hover:text-fondo rounded-md py-2 px-3 mx-2 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('signUp','viewSignUp')">Sign Up</button> 
                 <button class="bg-hover hover:bg-textBase hover:text-fondo rounded-md py-2 px-3 sm:mx-2 hover:cursor-pointer whitespace-nowrap" onclick="goTo('logIn','viewLogIn')">Log In</button> 

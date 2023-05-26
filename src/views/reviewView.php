@@ -8,12 +8,12 @@
     <link href="../src/css/reviewSt.css" rel="stylesheet">
     <title><?php echo $movie->getMovieTitle() ?></title>
 </head>
-<body>
+<body id="bodyId">
     <header>
         <div class="homeButtonDiv">
-            <button class="homeButton" onclick="goTo('home')">
-                <img src="../src/assets/glue.svg" alt="" srcset="" alt="Logo" width="100px" height="60px">
-                <h1>K I N O</h1>
+            <button class="homeButton" id="homeButton" onclick="goTo('home')">
+                <img id="homeImg" src="../src/assets/glue.svg" srcset="" alt="Logo" width="100px" height="60px">
+                <h1 id="homeTitle">K I N O</h1>
             </button>
         </div>
     </header>
