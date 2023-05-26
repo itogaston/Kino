@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../src/css/tailwind.css">
     <script src="../src/js/flickity.pkgd.min.js"></script>
     <script src="../src/js/searchListener.js"></script>
-    <title>C I N E</title>
+    <title>K I N O</title>
 </head>
 
 <body class="bg-headerMenu">
@@ -19,7 +19,7 @@
         <div class="flex flex-row items-start flex-wrap sm:flex-nowrap justify-between sm:justify-normal sm:items-center pt-2 bg-headerMenu pb-2 mr-4">
             <button class="basis-1/3 flex items-center justify-center sm:justify-start sm:ml-7 hover:cursor-pointer" onclick="goTo('home')">
                 <img src="../src/assets/glue.svg" alt="" srcset="" alt="Logo" width="100px" height="60px">
-                <h1 class="ml-3 hidden sm:block text-textTitle">C I N E</h1>
+                <h1 class="ml-3 hidden sm:block text-textTitle">K I N O</h1>
             </button>
 
             <div class="mt-2 flex-row-reverse sm:flex-row sm:mt-0 mx-2 sm:mx-0 order-3 sm:order-none w-full sm:basis-1/3 flex items-center justify-between rounded-md h-8">

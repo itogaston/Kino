@@ -13,7 +13,7 @@
         <div class="homeButtonDiv">
             <button class="homeButton" onclick="goTo('home')">
                 <img src="../src/assets/glue.svg" alt="" srcset="" alt="Logo" width="100px" height="60px">
-                <h1>C I N E</h1>
+                <h1>K I N O</h1>
             </button>
         </div>
     </header>
@@ -38,7 +38,7 @@
             <?php
                 foreach( $reviews as $review ){
                 echo '<div class="rev">';
-                    echo '<img class="userIcon" src="../src/assets/user_icon.svg">';
+                    echo '<img alt="User icon" class="userIcon" src="../src/assets/user_icon.svg">';
                     echo '<div class="text">';
                     
                     echo '<h3 class="author">'.$review['userName'].'</h3>';
