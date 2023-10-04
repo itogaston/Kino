@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Advance search page, search your favourite movies with specific criteria">
+    <link rel="stylesheet" href="../css/base.css"  >
+    <link rel="stylesheet" href="../css/advancedSearch.css"  >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+</head>
+
+<body>
+    <header>
+        <div class="homeButtonDiv">
+            <div class="homeButton" id="homeButton" onclick="goTo('home')">
+                <img id="homeImg" src="../assets/glue.svg" srcset="" alt="Logo" width="100px" height="60px">
+                <h1 id="title">Advanced Search</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <form action="../index.php?page=advSearch&action=searchMovie" method="post">
+
+                <div class="dropdown">
+                    <div class="dropbtn" id="activar"  title="Click to show more filters" >Options</div>
+                    <div class="dropdown-content" alt="Click for show more filters">
+                        <a id="movie" href="#" onclick="changeText('Movie')">Movie</a></li>
+                        <a id="serie" href="#" onclick="changeText('Series')">Series</a></li>
+                        <a id="ep" href="#" onclick="changeText('Episode')">Episode</a></li>
+                        
+                    </div>
+                    <input type="hidden" id="opcionBusqueda" name="typeSearch" readonly>
+                </div>
+
+
+                <input type="text" placeholder="Movie title..." name="movieTitle" required>
+                <button type="submit" value="Search">
+                    <img src="..\assets\searchIcon.png" alt="Search Icon">
+                </button>
+
+
+                <div class="search-options">
+                
+                    <div class="search-param" id="bus1">
+                        <input type="text" placeholder="Year of release" name="yearORel">
+                    </div>
+                    <div class="search-param" id="bus2">
+                        <input type="text" placeholder="Imbd ID" name="imbdId">
+                    </div>
+                    <div>
+                        <a title="Click to hide extra filters" id="hidebut" href="#">Hide filters</a>
+                    </div>
+
+                </div>
+                    
+            </form>
+                    </div>
+
+    </main>
+    <script src="../js/searchBar.js"></script>
+</body>
+
+</html>

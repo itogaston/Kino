@@ -1,0 +1,131 @@
+
+.titulo{
+    text-size-adjust: 50;
+    color: #fff;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+header{
+  background-color: #21282f;
+  text-align: center;
+  color: #99aabb;
+}
+
+body{
+   background: linear-gradient(#14181c, #22272b);
+   justify-content: center;
+}
+
+.homeButtonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} 
+
+.search-container {
+  margin-top: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-container input[type="text"], .search-container button {
+  height: 39px;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.search-container input[type="text"] {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 5%;
+
+}
+
+.search-container button {
+  width: 50px;
+  height: 38px;
+  border-radius: 5%;
+  background-size: cover;
+  background-color: #611bac; /*var(--hover)*/
+  cursor: pointer;
+}
+
+.search-container button img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.dropbtn {
+    border-radius: 5%;
+    background-color: #611bac;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 16px;
+}
+
+.search-options {
+  margin-top: 25px;
+  margin-left: 27%;
+}
+
+.search-param{
+    display: none;
+}
+
+.dropdown {
+  width: 86px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  width: 86px;
+  position: absolute;
+  background-color: #611bac;
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #351654;
+  }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#hidebut{
+  margin-top: 5px;
+  display: none;
+}
+
+.search-param input[type="text"] {
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  body {
+    width: 200;
+  }}

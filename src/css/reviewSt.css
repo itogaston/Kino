@@ -1,0 +1,421 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: var(--headerMenu);
+}
+
+main {
+    height: 94%;
+    padding: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: var(--fondo);
+}
+
+header, .homeButtonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--headerMenu);
+} 
+
+.homeButton {
+    display: flex;
+    align-items: center;
+    background: var(--headerMenu);
+    border: 0px;
+} 
+
+.movie {
+    height: 50%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*https://www.peachpit.com/articles/article.aspx?p=1925240&seqNum=3*/
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+            10px 10px 15px rgba(0,0,0,0.5),
+            -1px -1px 30px rgba(0,0,0,0.2);
+    background: var(--headerMenu);
+    border: 1px solid var(--fondo);
+    border-radius: 10px;
+}
+
+.reviewRelated {
+    margin-top: 5%;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.writeReview {
+    margin-top: 10%;
+    height: 10%;
+    width: 100%;
+}
+
+.movieInfo {
+    height: 60%;
+    display: flex;
+}
+
+.movieImg {
+    width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+            10px 10px 15px rgba(0,0,0,0.5),
+            -1px -1px 30px rgba(0,0,0,0.2);
+    
+    z-index: 2;
+}
+
+.movieImg:hover {
+    transform: perspective(1000px) rotateY(15deg) 
+    rotateX(5deg);
+}
+
+.movieText {
+    width: 45%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    color: var(--textTitle);
+}
+
+h3{
+    margin: auto;
+    font-size: 14px;
+    color: var(--textBase);
+}
+
+.synopsis {
+    width: 100%;
+    height: 40%;
+    padding: 5%;
+}
+
+p {
+    height: 100%;
+    width: 100%;
+    color: var(--textBase);
+    font-size: 13px;
+}
+
+.headerDiv {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: var(--hover);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+.inputText {
+    height: 100%;
+    width: 80%;
+    border: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--textBase);
+    background: var(--headerMenu);
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: var(--textBase);
+    background: var(--headerMenu);
+    border-radius: 10px;
+} 
+
+textarea:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px var(--hover);
+}
+
+.reviews {
+    height: 80%;
+    width: 100%;
+    border: 1px solid var(--fondo);
+    border-radius: 10px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.reviews::-webkit-scrollbar{
+    display: none;
+}
+
+.rev {
+    width: 90%;
+    height: auto;
+    margin: 5%;
+    background-color: var(--headerMenu);
+    border-radius: 10px;
+    scroll-behavior: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+}
+
+.userIcon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--textTitle);
+    background-color: var(--textTitle);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.text {
+    height: auto;
+    width: auto;
+    margin: 12px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.author {
+    margin: 0;
+    text-align: start;
+    color: var(--textTitle);
+    background-color: var(--hover);
+    width: fit-content;
+    padding: 2px;
+    font-size: 16px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.bodyText {
+    margin: 5px;
+    color: var(--textBase);
+    font-size: 16px;
+}
+
+.submitButton {
+    width: 40px;
+    height: 40px;
+    background-color: var(--hover);
+    border: 0px;
+    border-radius: 5px;
+} 
+
+.submitButtonImg {
+    width: 95%;
+    height: 95%;
+    align-self: center;
+    fill: white;
+} 
+
+.submitButton:hover {
+    transform: scale(1.1);
+}
+
+.submitButton:checked {
+    transform: scale(0.9);
+} 
+
+form {
+    display: flex;
+    align-content: space-between;
+
+} 
+
+@media only screen and (min-width: 800px) {
+    
+    .movie {
+        background-color: var(--fondo);
+        box-shadow: none;
+        border: none;
+    }
+
+    .headerDiv {
+        display: none;
+    }
+
+    h3 {
+        font-size: 24px;
+        width: 50%;
+        padding: 5%;
+        margin: 0;
+        color: var(--textTitle);
+    }
+
+    p {
+        margin-left: auto;
+        font-size: 18px;
+        padding: 5%;
+    }
+
+    .inputText textarea {
+        font-size: 18px;
+    }
+    .movieImg {
+        height: 100%;
+        width: 250px;
+    }
+    
+    .movie {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .movieInfo {
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .movieText {
+        flex-direction: row;
+        margin-top: auto;
+        margin-left: 20%;
+        height: 50%;
+        width: 100%;
+    }
+
+    .synopsis {
+        width: 50%;
+        height: 50%;
+        padding: 0;
+    } 
+
+    .userIcon {
+        width: 64px;
+        height: 64px;
+        margin-left: 24px;
+        margin-top: 24px;
+    }
+    
+    .text {
+        margin: 24px;
+    }
+    
+    .author {
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 3px;
+    }
+    
+    .bodyText {
+        margin: 5px;
+        font-size: 16px;
+        padding: 0;
+    }
+
+}
+
+@media only screen and (min-width: 980px) {
+    .reviewRelated {
+        display: flex;
+        flex-direction: row;
+        height: 45%;
+    }
+    
+    .reviews {
+        width: 60%;
+        height: 100%;
+    }
+    .writeReview {
+        margin-top: 0;
+        margin-left: 10%;
+        width: 30%;
+        height: 10%;
+    }
+
+    main {
+        height: 98%;
+        padding: 2%;
+        align-items: start;
+    }
+
+    .movie {
+        height: 50%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .movieImg {
+        height: 100%;
+        width: 18%;
+    }
+
+    .movieText {
+        width: 82%;
+        margin: 0;
+        height: 80%;
+        align-self: center;
+    }
+
+    textarea:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 5px var(--hover);
+    }
+
+    .synopsis {
+        width: 100%;
+        height: 20%;
+        padding: 0;
+    }
+
+    p {
+        width: 98%;
+        padding: 2%;
+    }
+
+    .movieInfo {
+        width: 100%;
+        flex-direction: row;
+        height: 80%;
+        flex-wrap: nowrap;
+    }
+
+    h3 {
+        width: 49%;
+        padding: 1%;
+    }
+
+    .userIcon {
+        width: 96px;
+        height: 96px;
+        margin-left: 24px;
+        margin-top: 24px;
+    }
+    
+    .author {
+        padding: 5px;
+        font-size: 24px;
+        border-radius: 3px;
+    }
+    
+    .bodyText {
+        margin: 10px;
+        font-size: 18px;
+        padding: 0;
+    }
+}
